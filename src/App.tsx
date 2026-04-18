@@ -82,11 +82,14 @@ export default function App() {
     <div dir={isRTL ? 'rtl' : 'ltr'} className={cn("min-h-screen bg-white text-text-main font-sans")}>
       
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 h-[72px] bg-white z-50 border-b border-[#F3F4F6] flex items-center justify-between px-6 lg:px-10 transition-all duration-300">
+      <nav className="fixed top-0 left-0 right-0 h-[100px] md:h-[120px] bg-white z-50 border-b border-[#F3F4F6] flex items-center justify-between px-6 lg:px-10 transition-all duration-300">
         <div className="flex items-center cursor-pointer" onClick={() => scrollToSection('home')}>
-          <span className="font-sans font-black text-[24px] md:text-[28px] tracking-tighter text-brand-blue">
-            HAMZ1 <span className="ml-1 font-bold text-[18px] md:text-[20px] tracking-tight">DIGITAL</span>
-          </span>
+          <img 
+            src="https://res.cloudinary.com/ddfazkkij/image/upload/q_auto/f_auto/v1776534353/Gemini_Generated_Image_l23co1l23co1l23c_stdouo.png" 
+            alt="hamz1 Digital Logo" 
+            className="h-20 md:h-24 w-auto object-contain rounded-full border border-gray-100"
+            referrerPolicy="no-referrer"
+          />
         </div>
 
         {/* Desktop Nav */}
@@ -773,9 +776,9 @@ export default function App() {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
           <div className="flex items-center gap-2">
              <img 
-              src="https://res.cloudinary.com/ddfazkkij/image/upload/q_auto/f_auto/v1776524204/Logoooo_xk21wl.png" 
+              src="https://res.cloudinary.com/ddfazkkij/image/upload/q_auto/f_auto/v1776534353/Gemini_Generated_Image_l23co1l23co1l23c_stdouo.png" 
               alt="hamz1 Digital Logo" 
-              className="h-12 md:h-14 w-auto rounded-[6px] object-contain"
+              className="h-20 md:h-24 w-auto object-contain rounded-full border border-gray-100"
               referrerPolicy="no-referrer"
             />
           </div>

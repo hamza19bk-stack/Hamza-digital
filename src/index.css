@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #00A3FF;
+  --color-brand-blue-dark: #0082CC;
+  
+  --color-text-main: #1F2937;
+  --color-text-muted: #6B7280;
+  
+  --color-bg-light: #F9FAFB;
+  --color-white: #FFFFFF;
+  
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-hero: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-arabic: "Cairo", "Tajawal", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+

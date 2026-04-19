@@ -7,6 +7,15 @@ function cn(...inputs: (string | undefined | null | false)[]) {
   return inputs.filter(Boolean).join(' ');
 }
 
+const myWorkVideos = [
+  "https://res.cloudinary.com/ddfazkkij/video/upload/q_auto/f_auto/v1776614601/0419_2_d3ktue.mp4",
+  "https://res.cloudinary.com/ddfazkkij/video/upload/q_auto/f_auto/v1776614351/mimoza_uu7zpk.mp4",
+  "https://res.cloudinary.com/ddfazkkij/video/upload/q_auto/f_auto/v1776614451/0419_1_erbf8y.mp4",
+  "https://res.cloudinary.com/ddfazkkij/video/upload/q_auto/f_auto/v1776614352/MITCHO_2_buzjea.mp4",
+  "https://res.cloudinary.com/ddfazkkij/video/upload/q_auto/f_auto/v1776614356/VIdeo_site_1_rduhz6.mp4",
+  "https://res.cloudinary.com/ddfazkkij/video/upload/q_auto/f_auto/v1776614351/play_3_wluono.mp4"
+];
+
 export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [language, setLanguage] = useState<Language>('FR');
@@ -422,6 +431,32 @@ export default function App() {
           </div>
         </section>
 
+        {/* My Work Section */}
+        <section id="my-work" className="py-16 md:py-24 bg-[#F9FAFB] px-6 border-t border-[#F3F4F6]">
+          <div className="max-w-5xl mx-auto">
+            <div className="mb-12 text-center">
+              <h2 className="font-sans text-[28px] sm:text-[36px] font-extrabold text-[#111827] leading-[1.2]">
+                My work
+              </h2>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {myWorkVideos.map((video, idx) => (
+                <div key={idx} className="rounded-[16px] overflow-hidden shadow-sm bg-black aspect-video transition-transform duration-300 hover:scale-[1.02] hover:shadow-md">
+                  <video 
+                    src={video}
+                    controls
+                    className="w-full h-full object-cover"
+                    muted
+                    loop
+                    playsInline
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section id="contact" className="py-16 md:py-24 px-6 bg-white border-t border-[#F3F4F6]">
           <div className="max-w-5xl mx-auto">
@@ -570,6 +605,24 @@ export default function App() {
                   <p className="text-[16px] sm:text-[18px] font-bold text-gray-900 mb-10 border-l-4 border-brand-blue pl-4">
                     {t.service_web_conclusion}
                   </p>
+
+                  <div className="mb-10">
+                    <h3 className="font-bold text-[22px] text-gray-900 mb-6">My work</h3>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {myWorkVideos.map((video, idx) => (
+                        <div key={idx} className="rounded-[12px] overflow-hidden shadow-sm bg-black aspect-video">
+                          <video 
+                            src={video}
+                            controls
+                            className="w-full h-full object-cover"
+                            muted
+                            loop
+                            playsInline
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
 
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-6 bg-[#F9FAFB] p-6 sm:p-8 rounded-[16px] border border-[#F3F4F6]">
                     <div className="text-[#FFC107] font-extrabold text-[24px]">
